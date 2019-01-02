@@ -1,4 +1,4 @@
-package me.khrystal.kcache;
+package me.khrystal.kcache.session;
 
 import me.khrystal.kcache.console.Console;
 import me.khrystal.kcache.ehcache.EhCacheStorage;
