@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 @Order(2)
 public class EhCacheStorage {
-    private static final String EHCACHESTORAGE_NAME = EhCacheStorage.class.getSimpleName();
+    public static final String EHCACHESTORAGE_NAME = EhCacheStorage.class.getSimpleName();
 
     private static Cache cache;
 
