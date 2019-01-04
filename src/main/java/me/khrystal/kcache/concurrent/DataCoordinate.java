@@ -1,5 +1,6 @@
 package me.khrystal.kcache.concurrent;
 
+import me.khrystal.kcache.annotation.NullValObject;
 import me.khrystal.kcache.ehcache.EhCacheStorage;
 import me.khrystal.kcache.redis.RedisStorage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,8 +64,7 @@ public class DataCoordinate {
      * set 1 level null cache, anti breakdown
      */
     public void fulFillLevel1NullValue(String key) {
-        // TODO: 19/1/3 need add an NullValObject
-        executorService.execute(() -> ehCacheStorage.set(key, null, 21 * 1000L));
+        executorService.execute(() -> ehCacheStorage.set(key, new NullValObject(), 21 * 1000L));
     }
 
     /**
